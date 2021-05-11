@@ -1,0 +1,2 @@
+C:\Users\TT-SPYKS\Desktop\ASPNETMVCApplication\ASPNETMVCApplication\ASPNETMVCApplication\obj\Debug\ASPNETMVCApplication.csprojAssemblyReference.cache
+C:\Users\TT-SPYKS\Desktop\ASPNETMVCApplication\ASPNETMVCApplication\ASPNETMVCApplication\obj\Debug\ASPNETMVCApplication.csproj.CoreCompileInputs.cache
