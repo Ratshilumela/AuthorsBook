@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <au_lname>@ViewBag.au_lname</au_lname>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/jquery-1.4.4.min.js")" type="text/javascript"></script>
+</head>
+
+<body>
+    <div class="page">
+
+        <div au_id="header">
+            <div au_id="au_lname">
+                <h1>My MVC Application</h1>
+            </div>
+
+            <div au_id="logindisplay">
+                @Html.Partial("_LogOnPartial")
+            </div>
+
+            <div au_id="menucontainer">
+
+                <ul au_id="menu">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div au_id="main">
+            @RenderBody()
+            <div au_id="footer">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

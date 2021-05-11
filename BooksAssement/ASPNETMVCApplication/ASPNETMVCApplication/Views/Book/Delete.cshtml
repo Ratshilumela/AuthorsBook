@@ -1,0 +1,45 @@
+﻿@model ASPNETMVCApplication.Models.Book
+
+@{
+    ViewBag.au_lname = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Book</legend>
+
+    <div class="display-label">au_lname</div>
+    <div class="display-field">@Model.au_lname</div>
+
+    <div class="display-label">au_fname</div>
+    <div class="display-field">@Model.au_fname</div>
+
+    <div class="display-label">phone</div>
+    <div class="display-field">@String.Format("{0:F}", Model.phone)</div>
+
+    <div class="display-label">address</div>
+    <div class="display-field">@Model.address</div>
+
+    <div class="display-label">city</div>
+    <div class="display-field">@Model.city</div>
+
+    <div class="display-label">state</div>
+    <div class="display-field">@Model.state</div>
+
+    <div class="display-label">zip</div>
+    <div class="display-field">@Model.zip</div>
+
+    <div class="display-label">contract</div>
+    <div class="display-field">@Model.contract</div>
+   
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}
+
+

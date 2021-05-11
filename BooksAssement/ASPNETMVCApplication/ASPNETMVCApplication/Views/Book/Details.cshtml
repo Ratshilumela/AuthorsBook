@@ -1,0 +1,41 @@
+﻿@model ASPNETMVCApplication.Models.Book
+
+@{
+    ViewBag.au_lname = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Book</legend>
+
+    <div class="display-label">au_lname</div>
+    <div class="display-field">@Model.au_lname</div>
+
+    <div class="display-label">au_fname</div>
+    <div class="display-field">@Model.au_fname</div>
+
+    <div class="display-label">phone</div>
+    <div class="display-field">@String.Format("{0:F}", Model.phone)</div>
+
+    <div class="display-label">address</div>
+    <div class="display-field">@Model.address</div>
+
+    <div class="display-label">city</div>
+    <div class="display-field">@Model.city</div>
+
+    <div class="display-label">state</div>
+    <div class="display-field">@Model.state</div>
+
+    <div class="display-label">zip</div>
+    <div class="display-field">@Model.zip</div>
+
+    <div class="display-label">contract</div>
+    <div class="display-field">@Model.contract</div>
+        
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { au_id = Model.au_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

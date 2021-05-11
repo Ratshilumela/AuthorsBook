@@ -1,0 +1,77 @@
+﻿@model IEnumerable<ASPNETMVCApplication.Models.Book>
+
+@{
+    ViewBag.au_lname = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th></th>
+        <th>
+            au_lname
+        </th>
+        <th>
+            au_fname
+        </th>
+        <th>
+            phone
+        </th>
+        <th>
+            address
+        </th>
+        <th>
+            city
+        </th>
+        <th>
+            state
+        </th>
+        <th>
+            zip
+        </th>
+        <th>
+            contract
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { au_id = item.au_id }) |
+        @Html.ActionLink("Details", "Details", new { au_id = item.au_id }) |
+        @Html.ActionLink("Delete", "Delete", new { au_id = item.au_id })
+    </td>
+    <td>
+        @item.au_lname
+    </td>
+    <td>
+        @item.au_fname
+    </td>
+    <td>
+        @String.Format("{0:F}", item.phone)
+    </td>
+    <td>
+        @item.address
+    </td>
+    <td>
+        @item.city
+    </td>
+    <td>
+        @item.state
+    </td>
+    <td>
+        @item.zip
+    </td>
+    <td>
+        @item.contract
+    </td>
+
+</tr>
+}
+
+</table>
+
